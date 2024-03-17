@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+
+</head>
+<style>
+  body{
+
+    background-color: #dddddd;
+  }
+
+
+  .card{
+
+    width: 400px;
+    border:none;
+
+  }
+
+  .btr{
+
+    border-top-right-radius: 5px !important;
+  }
+
+
+  .btl{
+
+    border-top-left-radius: 5px !important;
+  }
+
+  .btn-dark {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+
+  .btn-dark:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+
+  .nav-pills{
+
+    display:table !important;
+    width:100%;
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 0px;
+    border-bottom: 1px solid #0d6efd40;
+
+  }
+
+  .nav-item{
+    display: table-cell;
+    background: #0d6efd2e;
+  }
+
+
+  .form{
+
+    padding: 10px;
+    height: 300px;
+  }
+
+  .form input{
+
+    margin-bottom: 25px;
+    border-radius: 3px;
+  }
+
+
+  .form input:focus{
+
+    box-shadow: none;
+  }
+
+
+  .form button{
+
+    margin-top: 20px;
+  }
+
+  p{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  p a{
+    text-decoration: none;
+  }
+</style>
+<body>
+<div class="d-flex justify-content-center align-items-center mt-5">
+
+
+  <div class="card">
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item text-center">
+        <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+        <div class="form px-4 pt-5">
+
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+
+          <button class="btn btn-dark btn-block" id="login">Login</button>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAspBFJXnENeSjfb57YzTgMedWhjUeMCRE",
+    authDomain: "onlyfitness-app.firebaseapp.com",
+    databaseURL: "https://onlyfitness-app-default-rtdb.firebaseio.com",
+    projectId: "onlyfitness-app",
+    storageBucket: "onlyfitness-app.appspot.com",
+    messagingSenderId: "571390965256",
+    appId: "1:571390965256:web:ff9eb23a5580e4204243bd"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  login.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+              const dt = new Date();
+              update(ref(database, 'users/' + user.uid),{
+                last_login: dt
+              })
+              alert("You're logged in!");
+              window.location.href = 'exercises.html';
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert(errorMessage);
+            });
+
+  });
+</script>
+</html>

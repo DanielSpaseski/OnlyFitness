@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Body Fat Calculator</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="bodyfat.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li><img src="logo.png" alt="logo" class="logo"></li>
+    <li style="margin-left: -100px;"><a href="index.html" class="home">Home</a></li>
+    <li><a href="exercises.html" class="home"  onclick="scroll()">Exercises</a></li>
+    <li><a href="calculators.html" class="home" >Health Calculators</a></li>
+    <li><a href="favorites.html" class="home" >Favorite Exercises</a></li>
+    <li><a href="diets.html" class="home" >Diet Plans</a></li>
+  </ul>
+</nav>
+
+
+<div class="container">
+
+  <h2 class="sect2bmi">Body Fat Calculator</h2>
+</div>
+<div class="container1">
+  <div class="box">
+
+    <div class="content">
+
+      <div class="gender">
+
+        <label class="container">
+          <input type="radio" name="radio" id="m"><p class="text">Male</p>
+          <span class="checkmark"></span>
+        </label>
+
+
+        <label class="container">
+          <input type="radio" name="radio" id="f" ><p class="text">Female</p>
+          <span class="checkmark"></span>
+        </label>
+
+      </div>
+      <div class="input">
+        <label for="height">Age</label>
+        <input type="text" class="text-input" id="age" autocomplete="off" required/>
+      </div>
+
+      <div class="containerHW">
+        <div class="inputH">
+          <label for="height">Height(cm)</label>
+          <input type="number" id="height" required>
+        </div>
+
+        <div class="inputW">
+          <label for="weight">Weight(kg)</label>
+          <input type="number" id="weight" required>
+        </div>
+
+        <div class="inputWT">
+          <label for="weight">Waist(cm)</label>
+          <input type="number" id="waist" required>
+        </div>
+      </div>
+
+      <button class="calculate" id="submit" onclick="calculate();">Calculate Body Fat</button>
+    </div>
+    <div class="result">
+      <p>Your Body Fat is</p>
+      <div id="result">00.00 %</div>
+      <p class="comment"></p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<script src="bodyfat.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

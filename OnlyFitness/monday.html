@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="logo.png">
+  <title>Favorite Exercises</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    #favorites-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .exercise-card:hover {
+      transform: translateY(-5px);
+    }
+    .exercise-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+      margin: 17px;
+      box-shadow: 0px 5px 10px 0px rgb(237 225 225 / 50%);
+    }
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<nav>
+  <ul>
+    <li><img src="logo.png" alt="logo" class="logo"></li>
+    <li style="margin-left: -100px;"><a href="index.html" class="home">Home</a></li>
+    <li><a href="exercises.html" class="home"  onclick="scroll()">Exercises</a></li>
+    <li><a href="calculators.html" class="home" >Health Calculators</a></li>
+    <li><a href="favorites.html" class="home" >Favorite Exercises</a></li>
+    <li><a href="diets.html" class="home" >Diet Plans</a></li>
+  </ul>
+</nav>
+
+<h1 class="sect1" id="ex-h1">Monday</h1>
+
+
+<div id="favorites-container"></div>
+
+
+</body>
+
+</html>

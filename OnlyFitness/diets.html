@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png">
+    <title>Diet Plans</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@800&display=swap');
+
+
+
+
+        body {
+            background-color: #FFFAFB;
+            font-family: 'Josefin Sans';
+            margin: 0;
+            padding: 20px;
+        }
+
+        .categories__container {
+            margin: 0 auto;
+            padding: 1.25rem 1rem;
+        }
+
+
+        .categories__suptitle {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            color: blue;
+        }
+
+        .categories__title {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            color: #111827;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+
+        .categories__description {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color: black;
+            text-align: center;
+            max-width: 831px;
+            margin: 0 auto 3rem;
+        }
+
+        .categories__grid {
+            position: relative;
+            left: 1.6%;
+            display: flex;
+            width: 97%;
+        }
+
+
+        .categories__title {
+            color: black;
+        }
+
+        .categories__description {
+            color: black;
+        }
+
+        .category {
+            padding-top: 1.5rem;
+            position: relative;
+            width: 100%;
+            height: 47vh;
+            text-decoration: none;
+            border-radius: 6px;
+            border-bottom: 4px solid #7432dd;
+            transform: scale(1, 1);
+            transition: 0.2s all ease-in-out;
+        }
+
+        .category:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .category__info {
+            padding: 3.5rem 1.5rem 2rem;
+            border-radius: 8px;
+            background: white;
+            width: 100%;
+            height: 100%;
+        }
+
+        .category__title {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            text-align: center;
+            color: black;
+            margin-bottom: 1.25rem;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .category__description {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: black;
+            text-align: center;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .category__info {
+            background: white;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><img src="logo.png" alt="logo" class="logo"></li>
+        <li style="margin-left: -100px;"><a href="index.html" class="home">Home</a></li>
+        <li><a href="exercises.html" class="home"  onclick="scroll()">Exercises</a></li>
+        <li><a href="calculators.html" class="home" >Health Calculators</a></li>
+        <li><a href="favorites.html" class="home" >Favorite Exercises</a></li>
+        <li><a href="diets.html" class="home" >Diet Plans</a></li>
+    </ul>
+</nav>
+
+<section class="categories">
+    <div class="container categories__container">
+        <h3 class="categories__suptitle">9 Diet Plans</h3>
+        <h1 class="categories__title">Healthy Diet Plans</h1>
+        <p class="categories__description">Many diets offer benefits that go beyond weight loss. The best programs for losing weight also improve your overall health. The biggest challenge is finding the one that will work for you. <br><br>Written by <b>Ryan Raman</b> <br>Medically Reviewed by <b>Jillian Kubala, MS, RD</b></p>
+        <div class="categories__grid">
+            <a href="tmd.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">The Mediterranean Diet</h4>
+                    <p class="category__description">The Mediterranean diet has long been considered the gold standard for nutrition, disease prevention, wellness, and longevity.
+                        This is based on its nutrition benefits and sustainability.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="dash.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">The DASH Diet</h4>
+                    <p class="category__description">Dietary Approaches to Stop Hypertension, or DASH, is an eating plan designed to help treat or prevent high blood pressure, which is clinically known as hypertension.</br>
+                        It emphasizes eating plenty of fruits, vegetables, whole grains, and lean meats. It is low in salt, red meat, added sugars, and fat.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="plantdiet.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">Plant-based and Flexitarian Diets</h4>
+                    <p class="category__description">Vegetarianism and veganism are the most popular versions of plant-based diets, which restrict animal products for health, ethical, and environmental reasons.<br>
+                        However, more flexible plant-based diets also exist, such as the flexitarian diet. This is a plant-based diet that allows eating animal products in moderation.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="mind.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">The MIND Diet</h4>
+                    <p class="category__description">The Mediterranean-DASH Intervention for Neurodegenerative Delay (MIND) diet combines aspects of the Mediterranean and DASH diets to create an eating pattern<br>
+                        that focuses on brain health.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="ww.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">WW (formerly Weight Watchers)</h4>
+                    <p class="category__description">WW, formerly Weight Watchers, is one of the most popular weight loss programs worldwide. While it doesn’t restrict any food groups,<br>
+                        people on a WW plan must eat within their set number of daily points to help them reach their ideal weight.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="fasting.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">Intermittent Fasting</h4>
+                    <p class="category__description">Intermittent fasting is a dietary strategy that cycles between periods of fasting and eating. Various forms exist, including the 16/8 method, which involves<br>
+                        limiting your calorie intake to 8 hours per day. There’s also the 5:2 method, which restricts your daily calorie intake to 500–600 calories twice per week.<br>
+                        While it’s primarily known as a diet for weight loss, intermittent fasting may have powerful benefits for both your body and brain.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="volumetrics.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">The Volumetrics Diet</h4>
+                    <p class="category__description">The Volumetrics diet was created by Penn State University nutrition professor Barbara Rolls and is meant to be a long-term lifestyle change rather than a strict diet.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="mayo.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">The Mayo Clinic Diet</h4>
+                    <p class="category__description">The Mayo Clinic Diet was created by the reputable medical organization of the same name. The Mayo Clinic Diet utilizes an easy-to-follow pyramid to encourage<br>
+                        exercise and a diet rich in fruits and vegetables.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="categories__grid">
+            <a href="lowcarb.html" class="category">
+                <div class="category__info">
+                    <h4 class="category__title">Low Carb Diets</h4>
+                    <p class="category__description">Low carb diets are among the most popular diets for weight loss. Examples include the Atkins diet, ketogenic (keto) diet, and low carb, high fat (LCHF) diet.<br>
+                        Some varieties reduce carbs more drastically than others. For instance, very low carb diets like the keto diet restrict this macronutrient to under 10% of total calories, <br>compared with 30% or less for other types.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="footer-body">
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                <img src="logo.png">
+            </div>
+            <div class="name">OnlyFitness</div>
+            <div class="made-by"><span style="color: #ffffff">Made by </span><span style="color: #1460e5">Daniel Spaseski</span></div>
+        </div>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
+</body>
+</html>

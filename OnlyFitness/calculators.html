@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="logo.png">
+  <title>All Calculators</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
+
+    body {
+      background-color: #FFFAFB;
+      font-family: 'Josefin Sans';
+      margin: 0;
+      padding: 20px;
+    }
+
+    .categories__container {
+      margin: 0 auto;
+      padding: 1.25rem 1rem;
+    }
+
+
+    .categories__suptitle {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      color: blue;
+    }
+
+    .categories__title {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      color: #111827;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+
+    .categories__description {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      color: black;
+      text-align: center;
+      max-width: 813px;
+      margin: 0 auto 3rem;
+    }
+
+    .categories__grid {
+      position: relative;
+      left: 1.6%;
+      display: flex;
+      gap: 5rem;
+      width: 97%;
+    }
+
+
+
+
+    .categories__title {
+      color: black;
+    }
+
+    .categories__description {
+      color: black;
+    }
+
+    .category {
+      padding-top: 1.5rem;
+      position: relative;
+      width: 100%;
+      height: 47vh;
+      text-decoration: none;
+      border-radius: 6px;
+      border-bottom: 4px solid #7432dd;
+      transform: scale(1, 1);
+      transition: 0.2s all ease-in-out;
+    }
+
+    .category:hover {
+      transform: scale(1.1, 1.1);
+    }
+
+    .category__icon {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 8px;
+    }
+
+    .category__info {
+      padding: 3.5rem 1.5rem 2rem;
+      border-radius: 8px;
+      background: white;
+      width: 100%;
+      height: 100%;
+    }
+
+    .category__title {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      text-align: center;
+      color: black;
+      margin-bottom: 1.25rem;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .category__description {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: black;
+      text-align: center;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .category__info {
+      background: white;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><img src="logo.png" alt="logo" class="logo"></li>
+    <li style="margin-left: -100px;"><a href="index.html" class="home">Home</a></li>
+    <li><a href="exercises.html" class="home"  onclick="scroll()">Exercises</a></li>
+    <li><a href="calculators.html" class="home" >Health Calculators</a></li>
+    <li><a href="favorites.html" class="home" >Favorite Exercises</a></li>
+    <li><a href="diets.html" class="home" >Diet Plans</a></li>
+  </ul>
+</nav>
+
+<section class="categories">
+  <div class="container categories__container">
+    <h3 class="categories__suptitle">6 Calculators</h3>
+    <h1 class="categories__title">Health &amp; Fitness Calculators</h1>
+    <p class="categories__description">Planning and living a healthy lifestyle require honest calculations.
+      Input your current and desired body parameters to understand numbers such as body mass index (BMI),
+      ideal weight, calorie intake, and other health indicators. They will help you make informed nutrition,
+      fitness, and overall well-being decisions.</p>
+    <div class="categories__grid">
+      <a href="bmi.html" class="category">
+        <img src="icons/bmi-icon.png" alt="BMI Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">BMI Calculator</h4>
+          <p class="category__description">Body Mass Index calculator, also known as BMI,
+            computes and classifies BMI for children and adults using data obtained from WHO and CDC.
+          </p>
+        </div>
+      </a>
+      <a href="calorie_counter.html" class="category">
+        <img src="icons/calorie-icon.png" alt="Calorie Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">Calorie Calculator</h4>
+          <p class="category__description">This calorie calculator computes how many calories are required
+            daily to maintain, decrease, or gain weight. Learn about the different types of calories and
+            how they affect you.</p>
+        </div>
+      </a>
+      <a href="bmr.html" class="category">
+        <img src="icons/bmr-icon.png" alt="BMR Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">BMR Calculator</h4>
+          <p class="category__description">BMR calculator uses well-known algorithms to calculate the
+            basal metabolic rate. Also, find out more about the factors that influence BMR.</p>
+        </div>
+      </a>
+
+    </div>
+    <div class="categories__grid" style="margin-top: 15px">
+      <a href="bodyfat.html" class="category">
+        <img src="icons/bodyfat-icon.png" alt="Body Fat Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">Body Fat Calculator</h4>
+          <p class="category__description">This body fat calculator uses the US Navy and BMI methods to approximate body fat percentage. It provides weight loss information to help you achieve your ideal body fat.
+          </p>
+        </div>
+      </a>
+      <a href="idealweight.html" class="category">
+        <img src="icons/ideal-icon.png" alt="IBW Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">IBW Calculator</h4>
+          <p class="category__description">Based on many famous equations, this ideal weight calculator determines an optimal healthy body weight based on age, gender, and height.</p>
+        </div>
+      </a>
+      <a href="macros.html" class="category">
+        <img src="icons/macro-icon.png" alt="BMR Calculator" class="category__icon">
+        <div class="category__info">
+          <h4 class="category__title">Macro Calculator</h4>
+          <p class="category__description">This macronutrient calculator computes macronutrient requirements relative to age, physical attributes, exercise level, and body weight objectives.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="footer-body">
+  <footer>
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        <img src="logo.png">
+      </div>
+      <div class="name">OnlyFitness</div>
+      <div class="made-by"><span style="color: #ffffff">Made by </span><span style="color: #1460e5">Daniel Spaseski</span></div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
